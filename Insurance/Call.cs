@@ -26,6 +26,7 @@ namespace Insurance
         {
             Application application = new Application();
             application.Show();
+            this.Hide();
 
 
         }

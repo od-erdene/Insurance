@@ -22,6 +22,7 @@ namespace Insurance
         {
             Accident accident = new Accident();
             accident.ShowDialog();
+            this.Hide();
         }
     }
 }

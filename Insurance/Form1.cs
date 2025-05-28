@@ -21,6 +21,7 @@ namespace Insurance
         {
             Register register = new Register();
             register.ShowDialog();
+            this.Hide();
 
         }
     }

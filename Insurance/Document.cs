@@ -21,6 +21,7 @@ namespace Insurance
         {
             Call call = new Call();
             call.Show();
+            this.Hide();
         }
     }
 }

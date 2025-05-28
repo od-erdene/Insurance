@@ -21,6 +21,7 @@ namespace Insurance
         {
             Bank bank = new Bank();
             bank.Show();
+            this.Hide();
         }
     }
 }

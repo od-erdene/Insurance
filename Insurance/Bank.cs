@@ -16,5 +16,12 @@ namespace Insurance
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Document document = new Document();
+            document.ShowDialog();
+            this.Hide();
+        }
     }
 }
