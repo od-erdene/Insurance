@@ -10,17 +10,15 @@ using System.Windows.Forms;
 
 namespace Insurance
 {
-    public partial class Form1 : Form
+    public partial class Investigator : Form
     {
-        public Form1()
+        public Investigator()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            Register register = new Register();
-            register.ShowDialog();
 
         }
     }
