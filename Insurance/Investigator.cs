@@ -21,5 +21,11 @@ namespace Insurance
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Witness witness = new Witness();
+            witness.ShowDialog();
+        }
     }
 }
