@@ -52,6 +52,30 @@
     <Compile Include="Accident.Designer.cs">
       <DependentUpon>Accident.cs</DependentUpon>
     </Compile>
+    <Compile Include="Application.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application.Designer.cs">
+      <DependentUpon>Application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank.Designer.cs">
+      <DependentUpon>Bank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Call.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Call.Designer.cs">
+      <DependentUpon>Call.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Document.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Document.Designer.cs">
+      <DependentUpon>Document.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +87,12 @@
     </Compile>
     <Compile Include="Investigator.Designer.cs">
       <DependentUpon>Investigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offender.Designer.cs">
+      <DependentUpon>Offender.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,11 +111,26 @@
     <EmbeddedResource Include="Accident.resx">
       <DependentUpon>Accident.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Application.resx">
+      <DependentUpon>Application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank.resx">
+      <DependentUpon>Bank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Call.resx">
+      <DependentUpon>Call.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document.resx">
+      <DependentUpon>Document.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Investigator.resx">
       <DependentUpon>Investigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offender.resx">
+      <DependentUpon>Offender.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Insurance
 {
-    public partial class Witness : Form
+    public partial class Bank : Form
     {
-        public Witness()
+        public Bank()
         {
             InitializeComponent();
-        }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            Offender offender = new Offender();
-            offender.Show();
-            
         }
     }
 }
