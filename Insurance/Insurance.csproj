@@ -52,6 +52,12 @@
     <Compile Include="Accident.Designer.cs">
       <DependentUpon>Accident.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Application.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,7 @@
     <Compile Include="Call.Designer.cs">
       <DependentUpon>Call.cs</DependentUpon>
     </Compile>
+    <Compile Include="DB.cs" />
     <Compile Include="Document.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="Accident.resx">
       <DependentUpon>Accident.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Application.resx">
       <DependentUpon>Application.cs</DependentUpon>
