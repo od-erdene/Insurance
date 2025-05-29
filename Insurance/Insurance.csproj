@@ -58,11 +58,29 @@
     <Compile Include="AddAccidentForm.Designer.cs">
       <DependentUpon>AddAccidentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddBankAccountTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBankAccountTypeForm.Designer.cs">
+      <DependentUpon>AddBankAccountTypeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddBankForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddBankForm.Designer.cs">
       <DependentUpon>AddBankForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCallTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCallTypeForm.Designer.cs">
+      <DependentUpon>AddCallTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProvinceFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProvinceFrom.Designer.cs">
+      <DependentUpon>AddProvinceFrom.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
@@ -133,11 +151,29 @@
     <Compile Include="UpdateAccidentForm.Designer.cs">
       <DependentUpon>UpdateAccidentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateBankAccountTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBankAccountTypeForm.Designer.cs">
+      <DependentUpon>UpdateBankAccountTypeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateBankForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UpdateBankForm.Designer.cs">
       <DependentUpon>UpdateBankForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCallTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCallTypeForm.Designer.cs">
+      <DependentUpon>UpdateCallTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProvinceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateProvinceForm.Designer.cs">
+      <DependentUpon>UpdateProvinceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlAccident.cs">
       <SubType>UserControl</SubType>
@@ -229,8 +265,17 @@
     <EmbeddedResource Include="AddAccidentForm.resx">
       <DependentUpon>AddAccidentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddBankAccountTypeForm.resx">
+      <DependentUpon>AddBankAccountTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddBankForm.resx">
       <DependentUpon>AddBankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCallTypeForm.resx">
+      <DependentUpon>AddCallTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProvinceFrom.resx">
+      <DependentUpon>AddProvinceFrom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
@@ -274,8 +319,17 @@
     <EmbeddedResource Include="UpdateAccidentForm.resx">
       <DependentUpon>UpdateAccidentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBankAccountTypeForm.resx">
+      <DependentUpon>UpdateBankAccountTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateBankForm.resx">
       <DependentUpon>UpdateBankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCallTypeForm.resx">
+      <DependentUpon>UpdateCallTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateProvinceForm.resx">
+      <DependentUpon>UpdateProvinceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlAccident.resx">
       <DependentUpon>UserControlAccident.cs</DependentUpon>
