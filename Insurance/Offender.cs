@@ -23,5 +23,10 @@ namespace Insurance
             bank.Show();
             this.Hide();
         }
+
+        private void Offender_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

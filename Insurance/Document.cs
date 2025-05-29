@@ -7,21 +7,167 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Insurance
 {
     public partial class Document : Form
     {
+        private List<DocumentInfo> uploadedFiles = new List<DocumentInfo>();
+        private readonly string[] requiredDocumentTypes = new string[]
+        {
+            "Компанийн албан бичиг /гэрээ компанийн нэр дээр бол/\r\n",
+            "Даатгалын гэрээт баталгаа /эх хувь/\r\n",
+            "Иргэний үнэмлэхний хуулбар\r\n",
+            "Эрх бүхий байгууллагын акт, тодорхойлолт /эх хувиараа/",
+            "Орон сууцны контор, СӨХ бусад байгууллагын акт, тодорхойлолт\r\n",
+            "Гэмтэж, эвдэрсэн эд хөрөнгийн фото зураг\r\n",
+            "Буруутай талын иргэний үнэмлэх /баталгаажсан хуулбар/",
+            "Хохирлын үнэлгээ /эх хувиараа/",
+            "Нэхэмжлэх/зардалын баримт /эх хувиараа/\r\n"
+        };
+
         public Document()
         {
             InitializeComponent();
+            InitializeRequiredDocuments();
+            InitializeComboBox();
+            UpdateNavigationButtons();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void InitializeComboBox()
         {
-            Call call = new Call();
-            call.Show();
+            cmbFileLabel.Items.Clear();
+            cmbFileLabel.Items.AddRange(requiredDocumentTypes);
+            cmbFileLabel.SelectedIndex = 0;
+        }
+
+        private void InitializeRequiredDocuments()
+        {
+            // Clear existing items
+            lvFiles.Items.Clear();
+            uploadedFiles.Clear();
+
+            // Add all required document types to the list view
+            foreach (string docType in requiredDocumentTypes)
+            {
+                var item = new ListViewItem("Байхгүй");
+                item.SubItems.Add(docType);
+                item.SubItems.Add("Хүлээгдэж байна");
+                lvFiles.Items.Add(item);
+            }
+        }
+
+        private void UpdateNavigationButtons()
+        {
+            // Show Next button only if all documents are uploaded
+            btnNext.Visible = uploadedFiles.Count == requiredDocumentTypes.Length;
+            btnBack.Visible = true;
+        }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            if (cmbFileLabel.SelectedItem == null)
+            {
+                MessageBox.Show("Баримтын төрлийг сонгоно уу.", "Баримтын төрөл шаардлагатай", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string selectedLabel = cmbFileLabel.SelectedItem.ToString();
+
+            // Check if this document type is already uploaded
+            if (uploadedFiles.Any(f => f.FileLabel == selectedLabel))
+            {
+                MessageBox.Show($"'{selectedLabel}' гэсэн төрлийн файл аль хэдийн оруулсан байна.",
+                    "Давхардсан төрөл", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog1.FileName;
+                string fileName = Path.GetFileName(filePath);
+
+                var documentInfo = new DocumentInfo
+                {
+                    FileName = fileName,
+                    FileLabel = selectedLabel,
+                    FilePath = filePath
+                };
+
+                uploadedFiles.Add(documentInfo);
+                UpdateFileInListView(documentInfo);
+
+                // Remove the uploaded document type from the combo box
+                cmbFileLabel.Items.Remove(selectedLabel);
+                if (cmbFileLabel.Items.Count > 0)
+                {
+                    cmbFileLabel.SelectedIndex = 0;
+                }
+
+                // Update navigation buttons
+                UpdateNavigationButtons();
+            }
+        }
+
+        private void UpdateFileInListView(DocumentInfo documentInfo)
+        {
+            // Find the item with matching label
+            foreach (ListViewItem item in lvFiles.Items)
+            {
+                if (item.SubItems[1].Text == documentInfo.FileLabel)
+                {
+                    item.SubItems[0].Text = documentInfo.FileName;
+                    item.SubItems[2].Text = documentInfo.FilePath;
+                    break;
+                }
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (uploadedFiles.Count != requiredDocumentTypes.Length)
+            {
+                var missingDocs = requiredDocumentTypes.Except(uploadedFiles.Select(f => f.FileLabel));
+                MessageBox.Show($"Бүх шаардлагатай баримтуудыг оруулна уу. Дутуу байгаа баримтууд:\n{string.Join("\n", missingDocs)}",
+                    "Дутуу баримтууд", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // TODO: Implement saving to database
+            MessageBox.Show("Бүх шаардлагатай баримтууд амжилттай орууллаа!", "Амжилттай", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Bank bank = new Bank();
+            bank.ShowDialog();
             this.Hide();
         }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (uploadedFiles.Count != requiredDocumentTypes.Length)
+            {
+                var missingDocs = requiredDocumentTypes.Except(uploadedFiles.Select(f => f.FileLabel));
+                MessageBox.Show($"Дараах алхам руу шилжихийн өмнө бүх шаардлагатай баримтуудыг оруулна уу. Дутуу байгаа баримтууд:\n{string.Join("\n", missingDocs)}",
+                    "Дутуу баримтууд", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // TODO: Navigate to the next form
+            // For now, just show a message
+            MessageBox.Show("Бүх баримтууд амжилттай оруулагдлаа! Дараах алхам руу шилжихэд бэлэн байна.",
+                "Амжилттай", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Call call = new Call();
+            call.ShowDialog();
+        }
+    }
+
+    public class DocumentInfo
+    {
+        public string FileName { get; set; }
+        public string FileLabel { get; set; }
+        public string FilePath { get; set; }
     }
 }

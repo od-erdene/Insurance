@@ -161,6 +161,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Offender";
             this.Text = "Offender";
+            this.Load += new System.EventHandler(this.Offender_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
