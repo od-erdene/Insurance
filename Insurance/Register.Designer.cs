@@ -41,6 +41,7 @@
             this.lblPhone1 = new System.Windows.Forms.Label();
             this.lblPhone2 = new System.Windows.Forms.Label();
             this.txtPhone2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lastName
@@ -68,7 +69,7 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(442, 614);
+            this.btnNext.Location = new System.Drawing.Point(642, 614);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(223, 73);
             this.btnNext.TabIndex = 3;
@@ -145,11 +146,22 @@
             this.txtPhone2.Size = new System.Drawing.Size(455, 31);
             this.txtPhone2.TabIndex = 11;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(381, 614);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(223, 73);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Буцах";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1453, 787);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPhone2);
             this.Controls.Add(this.lblPhone2);
             this.Controls.Add(this.lblPhone1);
@@ -182,5 +194,6 @@
         private System.Windows.Forms.Label lblPhone1;
         private System.Windows.Forms.Label lblPhone2;
         private System.Windows.Forms.TextBox txtPhone2;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -27,5 +27,11 @@ namespace Insurance
             Investigator investigator = new Investigator();
             investigator.ShowDialog();
         }
+
+        private void backBTN_Click(object sender, EventArgs e)
+        {
+            Register register = new Register();
+            register.ShowDialog();
+        }
     }
 }
