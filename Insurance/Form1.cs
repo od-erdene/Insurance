@@ -24,5 +24,12 @@ namespace Insurance
             this.Hide();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AdminLogin admin = new AdminLogin();
+            admin.ShowDialog();
+            this.Hide();
+        }
     }
 }
