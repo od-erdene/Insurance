@@ -87,7 +87,7 @@
             treeNode4.Text = "Тохиолдлуудын бичиг баримтууд";
             treeNode5.Name = "Node5";
             treeNode5.Text = "Дүүрэг Сум";
-            treeNode6.Name = "Node7";
+            treeNode6.Name = "Node6";
             treeNode6.Text = "Сум Хороо";
             treeNode7.Name = "Node4";
             treeNode7.Text = "Байршлууд";
@@ -101,9 +101,9 @@
             treeNode11.Text = "Банкууд";
             treeNode12.Name = "Node13";
             treeNode12.Text = "Банкны дансны эздийн төрлүүд";
-            treeNode13.Name = "Node15";
+            treeNode13.Name = "Node14";
             treeNode13.Text = "Эд хөрөнгийн төрлүүд";
-            treeNode14.Name = "Node16";
+            treeNode14.Name = "Node15";
             treeNode14.Text = "Мөрдөн шалгах байгууллагууд";
             treeNode15.Name = "Node8";
             treeNode15.Text = "Бусад мэдээллүүд";
