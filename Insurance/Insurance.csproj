@@ -175,6 +175,12 @@
     <Compile Include="UserControlEmployee.Designer.cs">
       <DependentUpon>UserControlEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlInvestigatorOrganization.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlInvestigatorOrganization.Designer.cs">
+      <DependentUpon>UserControlInvestigatorOrganization.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlPropertyType.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlEmployee.resx">
       <DependentUpon>UserControlEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlInvestigatorOrganization.resx">
+      <DependentUpon>UserControlInvestigatorOrganization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlPropertyType.resx">
       <DependentUpon>UserControlPropertyType.cs</DependentUpon>
