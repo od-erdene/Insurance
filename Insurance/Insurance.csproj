@@ -115,6 +115,78 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlAccident.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAccident.Designer.cs">
+      <DependentUpon>UserControlAccident.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlBank.Designer.cs">
+      <DependentUpon>UserControlBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlBankAccountType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlBankAccountType.Designer.cs">
+      <DependentUpon>UserControlBankAccountType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlCallTimeType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCallTimeType.Designer.cs">
+      <DependentUpon>UserControlCallTimeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlCallType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCallType.Designer.cs">
+      <DependentUpon>UserControlCallType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlCommittee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCommittee.Designer.cs">
+      <DependentUpon>UserControlCommittee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCustomer.Designer.cs">
+      <DependentUpon>UserControlCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlDocuments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDocuments.Designer.cs">
+      <DependentUpon>UserControlDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlDocumentsType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDocumentsType.Designer.cs">
+      <DependentUpon>UserControlDocumentsType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEmployee.Designer.cs">
+      <DependentUpon>UserControlEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlPropertyType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPropertyType.Designer.cs">
+      <DependentUpon>UserControlPropertyType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlProvince.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlProvince.Designer.cs">
+      <DependentUpon>UserControlProvince.cs</DependentUpon>
+    </Compile>
     <Compile Include="Witness.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +234,42 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlAccident.resx">
+      <DependentUpon>UserControlAccident.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlBank.resx">
+      <DependentUpon>UserControlBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlBankAccountType.resx">
+      <DependentUpon>UserControlBankAccountType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlCallTimeType.resx">
+      <DependentUpon>UserControlCallTimeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlCallType.resx">
+      <DependentUpon>UserControlCallType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlCommittee.resx">
+      <DependentUpon>UserControlCommittee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlCustomer.resx">
+      <DependentUpon>UserControlCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDocuments.resx">
+      <DependentUpon>UserControlDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDocumentsType.resx">
+      <DependentUpon>UserControlDocumentsType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEmployee.resx">
+      <DependentUpon>UserControlEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlPropertyType.resx">
+      <DependentUpon>UserControlPropertyType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlProvince.resx">
+      <DependentUpon>UserControlProvince.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Witness.resx">
       <DependentUpon>Witness.cs</DependentUpon>
