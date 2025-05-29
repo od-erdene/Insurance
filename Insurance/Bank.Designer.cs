@@ -152,6 +152,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Bank";
             this.Text = "Bank";
+            this.Load += new System.EventHandler(this.Bank_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

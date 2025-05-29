@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Insurance
 {
-     class DB
+    class DB : IDisposable
     {
         public SqlConnection con = new SqlConnection();
         public SqlCommand cmd = new SqlCommand();
@@ -27,6 +27,58 @@ namespace Insurance
             con.ConnectionString = @"Data Source = 172.16.25.45; Initial Catalog = Insurance_New; User ID = sa; Password = 123";
             con.Open();
             cmd.Connection = con;
+        }
+
+      
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+         
+                if (con != null)
+                {
+                    if (con.State == ConnectionState.Open)
+                    {
+                        con.Close();
+                    }
+                    con.Dispose();
+                    con = null;
+                }
+                if (cmd != null)
+                {
+                    cmd.Dispose();
+                    cmd = null;
+                }
+                if (ds != null)
+                {
+                    ds.Dispose();
+                    ds = null;
+                }
+                if (ada != null)
+                {
+                    ada.Dispose();
+                    ada = null;
+                }
+                if (dr != null && !dr.IsClosed)
+                {
+                    dr.Close();
+                    dr.Dispose();
+                    dr = null;
+                }
+            }
+          
+        }
+
+   
+        ~DB()
+        {
+            Dispose(false);
         }
     }
 }

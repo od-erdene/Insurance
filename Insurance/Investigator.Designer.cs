@@ -143,6 +143,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "Investigator";
             this.Text = "Investigator";
+            this.Load += new System.EventHandler(this.Investigator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

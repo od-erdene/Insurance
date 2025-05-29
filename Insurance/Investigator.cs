@@ -26,6 +26,12 @@ namespace Insurance
         {
             Witness witness = new Witness();
             witness.ShowDialog();
+            this.Hide();
+        }
+
+        private void Investigator_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -2,20 +2,19 @@
 {
     partial class Document
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
+
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing"
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
             {
                 components.Dispose();
+            }
+            if (disposing && (db != null))
+            {
+                db.Dispose(); // Dispose of the DB instance
             }
             base.Dispose(disposing);
         }
@@ -96,7 +95,7 @@
             this.lvFiles.HideSelection = false;
             this.lvFiles.Location = new System.Drawing.Point(50, 311);
             this.lvFiles.Name = "lvFiles";
-            this.lvFiles.Size = new System.Drawing.Size(1388, 305);
+            this.lvFiles.Size = new System.Drawing.Size(905, 305);
             this.lvFiles.TabIndex = 4;
             this.lvFiles.UseCompatibleStateImageBehavior = false;
             this.lvFiles.View = System.Windows.Forms.View.Details;
@@ -120,7 +119,7 @@
             // 
             this.btnSave.Enabled = false;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(402, 671);
+            this.btnSave.Location = new System.Drawing.Point(50, 671);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(200, 50);
             this.btnSave.TabIndex = 5;
@@ -135,7 +134,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(161, 671);
+            this.btnBack.Location = new System.Drawing.Point(513, 671);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(200, 50);
             this.btnBack.TabIndex = 6;
@@ -146,7 +145,7 @@
             // btnNext
             // 
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(645, 671);
+            this.btnNext.Location = new System.Drawing.Point(277, 671);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(200, 50);
             this.btnNext.TabIndex = 7;

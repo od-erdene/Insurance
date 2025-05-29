@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -39,6 +40,8 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -63,6 +66,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(188, 31);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -90,6 +94,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(333, 33);
             this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -122,22 +127,34 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(188, 31);
             this.textBox2.TabIndex = 10;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(411, 423);
+            this.button1.Location = new System.Drawing.Point(517, 432);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(238, 72);
             this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
+            this.button1.Text = "Дараах";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(248, 432);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(238, 72);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Буцах";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Call
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 679);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.dateTimePicker2);
@@ -151,7 +168,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Call";
             this.Text = "Call";
-            this.Load += new System.EventHandler(this.Call_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,5 +186,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button2;
     }
 }

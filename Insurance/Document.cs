@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace Insurance
 {
@@ -27,9 +28,12 @@ namespace Insurance
             "Нэхэмжлэх/зардалын баримт /эх хувиараа/\r\n"
         };
 
+        private DB db; // Instance of your DB class
+
         public Document()
         {
             InitializeComponent();
+            db = new DB(); // Initialize the DB instance
             InitializeRequiredDocuments();
             InitializeComboBox();
             UpdateNavigationButtons();
@@ -134,14 +138,71 @@ namespace Insurance
                 return;
             }
 
-            // TODO: Implement saving to database
-            MessageBox.Show("Бүх шаардлагатай баримтууд амжилттай орууллаа!", "Амжилттай", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                // Use the existing connection from the DB class instance
+                SqlConnection connection = db.con;
+
+                // SQL query to insert into AccidentDocuments table
+                string sql = "INSERT INTO AccidentDocuments (DocumentID, IsSubmitted, IsVerified, SubmittedAt, EmployeeID, AccidentID) VALUES (@DocumentID, @IsSubmitted, @IsVerified, @SubmittedAt, @EmployeeID, @AccidentID)";
+
+                foreach (var document in uploadedFiles)
+                {
+                    // Get the actual DocumentID from the Documents table based on DocumentName (document.FileLabel)
+                    int documentId = GetDocumentIdByLabel(document.FileLabel, connection);
+
+                    if (documentId > 0)
+                    {
+                        using (SqlCommand command = new SqlCommand(sql, connection))
+                        {
+                            command.Parameters.AddWithValue("@DocumentID", documentId);
+                            command.Parameters.AddWithValue("@IsSubmitted", true);
+                            command.Parameters.AddWithValue("@IsVerified", false);
+                            command.Parameters.AddWithValue("@SubmittedAt", DateTime.Now);
+                            // TODO: Replace with the actual EmployeeID and AccidentID
+                            command.Parameters.AddWithValue("@EmployeeID", 1); // Placeholder
+                            command.Parameters.AddWithValue("@AccidentID", 1); // Placeholder
+
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Could not find DocumentID for label: {document.FileLabel}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // Optionally break or continue depending on how you want to handle missing DocumentIDs
+                    }
+                }
+
+                MessageBox.Show("Бүх шаардлагатай баримтууд амжилттай хадгалагдлаа!", "Амжилттай", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Database Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Method to get DocumentID from the Documents table
+        private int GetDocumentIdByLabel(string label, SqlConnection connection)
+        {
+            int documentId = 0;
+            string query = "SELECT DocumentsID FROM Documents WHERE DocumentsName = @DocumentsName";
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@DocumentsName", label);
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    documentId = Convert.ToInt32(result);
+                }
+            }
+            return documentId;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Bank bank = new Bank();
-            bank.ShowDialog();
+            // Go back to the previous form
+            Call call = new Call();
+            call.Show();
             this.Hide();
         }
 
@@ -159,8 +220,6 @@ namespace Insurance
             // For now, just show a message
             MessageBox.Show("Бүх баримтууд амжилттай оруулагдлаа! Дараах алхам руу шилжихэд бэлэн байна.",
                 "Амжилттай", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Call call = new Call();
-            call.ShowDialog();
         }
     }
 

@@ -19,9 +19,14 @@ namespace Insurance
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Document document = new Document();
-            document.ShowDialog();
+            Call call = new Call();
+            call.Show();
             this.Hide();
+        }
+
+        private void Bank_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

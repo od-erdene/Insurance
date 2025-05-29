@@ -30,5 +30,10 @@ namespace Insurance
             Form1 form1 = new Form1();
             form1.ShowDialog();
         }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

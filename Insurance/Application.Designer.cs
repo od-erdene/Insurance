@@ -72,6 +72,7 @@
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Зөвшөөрч байна ";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label3
             // 
@@ -152,6 +153,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(424, 31);
             this.textBox1.TabIndex = 11;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -171,7 +173,7 @@
             this.button2.Text = "Илгээх";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // application
+            // Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,8 +192,9 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "application";
+            this.Name = "Application";
             this.Text = "application";
+            this.Load += new System.EventHandler(this.Application_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
