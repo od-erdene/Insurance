@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.lastName = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -67,11 +68,60 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lvFiles = new System.Windows.Forms.ListView();
+            this.colFileName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colFileLabel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colFilePath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblFileLabel = new System.Windows.Forms.Label();
+            this.cmbFileLabel = new System.Windows.Forms.ComboBox();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lastName
@@ -352,7 +402,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(1261, 604);
+            this.label13.Location = new System.Drawing.Point(1258, 611);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(308, 37);
             this.label13.TabIndex = 39;
@@ -401,26 +451,9 @@
             this.label16.TabIndex = 43;
             this.label16.Text = "Эд хөрөнгийн төрөл";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(1226, 745);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(306, 29);
-            this.label17.TabIndex = 47;
-            this.label17.Text = " Өргөдөл гаргагчийн нэр";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(1231, 787);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(455, 31);
-            this.textBox8.TabIndex = 46;
-            // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(1231, 693);
+            this.textBox9.Location = new System.Drawing.Point(1228, 700);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(455, 31);
             this.textBox9.TabIndex = 45;
@@ -429,18 +462,493 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(1226, 661);
+            this.label18.Location = new System.Drawing.Point(1223, 663);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(316, 29);
+            this.label18.Size = new System.Drawing.Size(225, 29);
             this.label18.TabIndex = 44;
-            this.label18.Text = " Өргөдөл гаргагчийн овог";
+            this.label18.Text = "Гэрчийн овог, нэр";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(1740, 700);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(352, 31);
+            this.textBox8.TabIndex = 46;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(1735, 663);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(338, 29);
+            this.label17.TabIndex = 47;
+            this.label17.Text = "Гэрчийн регистрийн дугаар";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(1223, 746);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(257, 29);
+            this.label19.TabIndex = 48;
+            this.label19.Text = "Гэрчийн гэрийн хаяг";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(1228, 788);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(174, 33);
+            this.comboBox2.TabIndex = 49;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(1425, 786);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(174, 33);
+            this.comboBox3.TabIndex = 50;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(1628, 786);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(524, 31);
+            this.textBox10.TabIndex = 51;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(2130, 663);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(281, 29);
+            this.label20.TabIndex = 52;
+            this.label20.Text = "Гэрчийн утасны дугаар";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(2134, 700);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(352, 31);
+            this.textBox11.TabIndex = 53;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(1258, 854);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(539, 37);
+            this.label21.TabIndex = 54;
+            this.label21.Text = "БУРУУТАЙ ТАЛЫН МЭДЭЭЛЭЛ:";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(1739, 949);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(352, 31);
+            this.textBox12.TabIndex = 64;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(1735, 912);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(181, 29);
+            this.label22.TabIndex = 63;
+            this.label22.Text = "Утасны дугаар";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(1628, 1035);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(524, 31);
+            this.textBox13.TabIndex = 62;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(1425, 1035);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(174, 33);
+            this.comboBox4.TabIndex = 61;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(1228, 1037);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(174, 33);
+            this.comboBox5.TabIndex = 60;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(1223, 995);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(154, 29);
+            this.label23.TabIndex = 59;
+            this.label23.Text = "Гэрийн хаяг";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(1228, 949);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(455, 31);
+            this.textBox15.TabIndex = 56;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(1223, 912);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(124, 29);
+            this.label25.TabIndex = 55;
+            this.label25.Text = "Овог, нэр";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(62, 854);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(367, 37);
+            this.label24.TabIndex = 65;
+            this.label24.Text = "БАНКНЫ МЭДЭЭЛЭЛ";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBox17);
+            this.groupBox2.Controls.Add(this.label30);
+            this.groupBox2.Controls.Add(this.textBox16);
+            this.groupBox2.Controls.Add(this.label29);
+            this.groupBox2.Controls.Add(this.comboBox7);
+            this.groupBox2.Controls.Add(this.label28);
+            this.groupBox2.Controls.Add(this.textBox14);
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Controls.Add(this.comboBox6);
+            this.groupBox2.Controls.Add(this.label26);
+            this.groupBox2.Location = new System.Drawing.Point(69, 922);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1105, 291);
+            this.groupBox2.TabIndex = 66;
+            this.groupBox2.TabStop = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(27, 29);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(176, 29);
+            this.label26.TabIndex = 67;
+            this.label26.Text = "Дансны төрөл";
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(29, 73);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(174, 33);
+            this.comboBox6.TabIndex = 67;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(634, 29);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(349, 29);
+            this.label27.TabIndex = 68;
+            this.label27.Text = "Данс эзэмшигчийн овог, нэр";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(639, 75);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(356, 31);
+            this.textBox14.TabIndex = 67;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(242, 29);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(148, 29);
+            this.label28.TabIndex = 69;
+            this.label28.Text = "Банкны нэр";
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(247, 75);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(344, 33);
+            this.comboBox7.TabIndex = 70;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(27, 131);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(183, 29);
+            this.label29.TabIndex = 71;
+            this.label29.Text = "Дансны дугаар";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(263, 131);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(558, 31);
+            this.textBox16.TabIndex = 72;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(27, 182);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(221, 29);
+            this.label30.TabIndex = 73;
+            this.label30.Text = "Нэмэлт мэдээлэл";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(263, 182);
+            this.textBox17.Multiline = true;
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(732, 75);
+            this.textBox17.TabIndex = 74;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(62, 1248);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(683, 37);
+            this.label31.TabIndex = 67;
+            this.label31.Text = "ДАРААХ МАТЕРИАЛУУДЫГ ОРУУЛНА УУ";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.dateTimePicker2);
+            this.groupBox3.Controls.Add(this.textBox18);
+            this.groupBox3.Controls.Add(this.label36);
+            this.groupBox3.Controls.Add(this.label35);
+            this.groupBox3.Controls.Add(this.label34);
+            this.groupBox3.Controls.Add(this.checkBox5);
+            this.groupBox3.Controls.Add(this.label33);
+            this.groupBox3.Controls.Add(this.checkBox4);
+            this.groupBox3.Controls.Add(this.label32);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(72, 1876);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1923, 658);
+            this.groupBox3.TabIndex = 80;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "МЭДҮҮЛЭГ";
+            // 
+            // label32
+            // 
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(29, 57);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(1865, 69);
+            this.label32.TabIndex = 2;
+            this.label32.Text = resources.GetString("label32.Text");
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox4.Location = new System.Drawing.Point(43, 129);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(245, 33);
+            this.checkBox4.TabIndex = 3;
+            this.checkBox4.Text = "Зөвшөөрч байна ";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(24, 174);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(1851, 95);
+            this.label33.TabIndex = 4;
+            this.label33.Text = resources.GetString("label33.Text");
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox5.Location = new System.Drawing.Point(43, 281);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(162, 33);
+            this.checkBox5.TabIndex = 5;
+            this.checkBox5.Text = "Ойлголоо";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(36, 337);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(374, 37);
+            this.label34.TabIndex = 81;
+            this.label34.Text = "ӨРГӨДӨЛ ГАРГАСАН:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(72, 409);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(327, 29);
+            this.label35.TabIndex = 75;
+            this.label35.Text = "Даатгуулагчийн гарын үсэг";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(72, 474);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(296, 29);
+            this.label36.TabIndex = 82;
+            this.label36.Text = "Өргөдөл гаргасан огноо";
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(427, 409);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(519, 44);
+            this.textBox18.TabIndex = 75;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(427, 474);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(519, 35);
+            this.dateTimePicker2.TabIndex = 83;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(651, 565);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(310, 58);
+            this.button1.TabIndex = 84;
+            this.button1.Text = "Илгээх";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lvFiles
+            // 
+            this.lvFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colFileName,
+            this.colFileLabel,
+            this.colFilePath});
+            this.lvFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvFiles.FullRowSelect = true;
+            this.lvFiles.GridLines = true;
+            this.lvFiles.HideSelection = false;
+            this.lvFiles.Location = new System.Drawing.Point(72, 1513);
+            this.lvFiles.Name = "lvFiles";
+            this.lvFiles.Size = new System.Drawing.Size(1728, 310);
+            this.lvFiles.TabIndex = 84;
+            this.lvFiles.UseCompatibleStateImageBehavior = false;
+            this.lvFiles.View = System.Windows.Forms.View.Details;
+            // 
+            // colFileName
+            // 
+            this.colFileName.Text = "Файлын нэр";
+            this.colFileName.Width = 200;
+            // 
+            // colFileLabel
+            // 
+            this.colFileLabel.Text = "Файлын төрөл";
+            this.colFileLabel.Width = 200;
+            // 
+            // colFilePath
+            // 
+            this.colFilePath.Text = "Файл хадгалах";
+            this.colFilePath.Width = 500;
+            // 
+            // lblFileLabel
+            // 
+            this.lblFileLabel.AutoSize = true;
+            this.lblFileLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFileLabel.Location = new System.Drawing.Point(72, 1377);
+            this.lblFileLabel.Name = "lblFileLabel";
+            this.lblFileLabel.Size = new System.Drawing.Size(220, 33);
+            this.lblFileLabel.TabIndex = 83;
+            this.lblFileLabel.Text = "Файлын төрөл:";
+            // 
+            // cmbFileLabel
+            // 
+            this.cmbFileLabel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFileLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFileLabel.FormattingEnabled = true;
+            this.cmbFileLabel.Location = new System.Drawing.Point(72, 1438);
+            this.cmbFileLabel.Name = "cmbFileLabel";
+            this.cmbFileLabel.Size = new System.Drawing.Size(1016, 39);
+            this.cmbFileLabel.TabIndex = 82;
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.Location = new System.Drawing.Point(72, 1309);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(200, 50);
+            this.btnUpload.TabIndex = 81;
+            this.btnUpload.Text = "Файл нэмэх";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoScrollMargin = new System.Drawing.Size(0, 1000000);
             this.ClientSize = new System.Drawing.Size(2740, 1783);
+            this.Controls.Add(this.lvFiles);
+            this.Controls.Add(this.lblFileLabel);
+            this.Controls.Add(this.cmbFileLabel);
+            this.Controls.Add(this.btnUpload);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.label31);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox9);
@@ -481,6 +989,10 @@
             this.Load += new System.EventHandler(this.Register_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,9 +1038,56 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.ListView lvFiles;
+        private System.Windows.Forms.ColumnHeader colFileName;
+        private System.Windows.Forms.ColumnHeader colFileLabel;
+        private System.Windows.Forms.ColumnHeader colFilePath;
+        private System.Windows.Forms.Label lblFileLabel;
+        private System.Windows.Forms.ComboBox cmbFileLabel;
+        private System.Windows.Forms.Button btnUpload;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
