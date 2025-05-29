@@ -52,6 +52,12 @@
     <Compile Include="Accident.Designer.cs">
       <DependentUpon>Accident.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddAccidentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAccidentForm.Designer.cs">
+      <DependentUpon>AddAccidentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,12 @@
     </Compile>
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAccidentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateAccidentForm.Designer.cs">
+      <DependentUpon>UpdateAccidentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlAccident.cs">
       <SubType>UserControl</SubType>
@@ -201,6 +213,9 @@
     </Compile>
     <EmbeddedResource Include="Accident.resx">
       <DependentUpon>Accident.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAccidentForm.resx">
+      <DependentUpon>AddAccidentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
