@@ -229,6 +229,9 @@
     <EmbeddedResource Include="AddAccidentForm.resx">
       <DependentUpon>AddAccidentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddBankForm.resx">
+      <DependentUpon>AddBankForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateAccidentForm.resx">
       <DependentUpon>UpdateAccidentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBankForm.resx">
+      <DependentUpon>UpdateBankForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlAccident.resx">
       <DependentUpon>UserControlAccident.cs</DependentUpon>
