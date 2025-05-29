@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-// Remove: using System.Data.SqlClient;
 
 namespace Insurance
 {
     public partial class AddAccidentForm : Form
     {
-        // Connection string is now managed by the DB class
-        // private string connectionString = "YOUR_CONNECTION_STRING_HERE";
 
         public AddAccidentForm()
         {
@@ -91,7 +88,6 @@ namespace Insurance
                 txtAccidentName.Focus();
                 return;
             }
-            // Add more validation...
 
             DB db = null;
             try
@@ -121,7 +117,6 @@ namespace Insurance
                 db.cmd.CommandText = query;
                 db.cmd.Parameters.Clear();
 
-                // Add Parameters (same as before)
                 db.cmd.Parameters.AddWithValue("@AccidentName", txtAccidentName.Text.Trim());
                 db.cmd.Parameters.AddWithValue("@AccidentLocation", string.IsNullOrWhiteSpace(txtAccidentLocation.Text) ? (object)DBNull.Value : txtAccidentLocation.Text.Trim());
                 db.cmd.Parameters.AddWithValue("@AccidentDate", dtpAccidentDate.Value.Date);

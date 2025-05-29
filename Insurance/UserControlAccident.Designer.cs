@@ -84,6 +84,7 @@
             this.Controls.Add(this.button1);
             this.Name = "UserControlAccident";
             this.Size = new System.Drawing.Size(527, 422);
+            this.Load += new System.EventHandler(this.UserControlAccident_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

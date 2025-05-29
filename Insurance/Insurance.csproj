@@ -256,6 +256,9 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAccidentForm.resx">
+      <DependentUpon>UpdateAccidentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlAccident.resx">
       <DependentUpon>UserControlAccident.cs</DependentUpon>
     </EmbeddedResource>

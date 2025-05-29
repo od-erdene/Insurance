@@ -15,11 +15,11 @@ namespace Insurance
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dataGridView1.ReadOnly = true;
             dataGridView1.AllowUserToAddRows = false;
+            LoadAccidentData();
         }
 
         private void UserControlAccident_Load(object sender, EventArgs e)
         {
-            LoadAccidentData();
         }
 
         public void LoadAccidentData()
@@ -159,6 +159,11 @@ namespace Insurance
             {
                 MessageBox.Show("Please select an accident to delete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void UserControlAccident_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
