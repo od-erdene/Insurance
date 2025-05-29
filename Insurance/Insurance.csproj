@@ -58,6 +58,12 @@
     <Compile Include="AddAccidentForm.Designer.cs">
       <DependentUpon>AddAccidentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddBankForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBankForm.Designer.cs">
+      <DependentUpon>AddBankForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,12 @@
     </Compile>
     <Compile Include="UpdateAccidentForm.Designer.cs">
       <DependentUpon>UpdateAccidentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBankForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBankForm.Designer.cs">
+      <DependentUpon>UpdateBankForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlAccident.cs">
       <SubType>UserControl</SubType>
