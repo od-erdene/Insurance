@@ -1,0 +1,93 @@
+Accident:
+AccidentID	int	Unchecked
+AccidentName	nvarchar(100)	Unchecked
+AccidentLocation	nvarchar(200)	Unchecked
+AccidentDate	date	Unchecked
+AccidentTime	time(7)	Unchecked
+AccidentDetails	nvarchar(MAX)	Unchecked
+CallTimeTypeID	int	Checked
+PropertyTypeID	int	Checked
+ContactedInvestigator	bit	Checked
+ReasonForNotContactingInvestigator	nvarchar(200)	Checked
+InvestigatorName	nvarchar(100)	Checked
+InvestigatorPhoneNumber	nvarchar(20)	Checked
+InvestigatorOrganizationID	int	Checked
+AppliedDate	date	Checked
+ApplcationSignature	nvarchar(100)	Checked
+OffenderName	nvarchar(100)	Checked
+OffenderPhoneNumber	nvarchar(20)	Checked
+OffenderRegisterNumber	nvarchar(20)	Checked
+OffenderCommitteeID	int	Checked
+OffenderAddress	nvarchar(200)	Checked
+WitnessName	nvarchar(100)	Checked
+WitnessPhoneNumber	nvarchar(20)	Checked
+WitnessRegisterNumber	nvarchar(20)	Checked
+WitnessCommitteeID	int	Checked
+WitnessAddress	nvarchar(200)	Checked
+BankAccountNumber	nvarchar(30)	Checked
+BankAccountTypeID	int	Checked
+BankID	int	Checked
+BankAccountOwnerName	nvarchar(100)	Checked
+BankAccountDetails	nvarchar(200)	Checked
+CallTypeID	int	Checked
+CallDate	date	Checked
+CallTime	time(7)	Checked
+CallEmployeeID	int	Checked
+AccidentDocuments:
+AccidentDocumentsID	int	Unchecked
+DocumentID	int	Unchecked
+IsSubmitted	bit	Checked
+IsVerified	bit	Checked
+SubmittedAt	datetime	Checked
+EmployeeID	int	Checked
+AccidentID	int	Checked
+Bank:
+BankID	int	Unchecked
+BankName	nvarchar(100)	Unchecked
+BankAccountType:
+BankAccountTypeID	int	Unchecked
+BankAccountTypeName	nvarchar(50)	Unchecked
+CallTimeType:
+CallTimeTypeID	int	Unchecked
+CallTimeTypeName	nvarchar(50)	Unchecked
+CallType:
+CallTypeID	int	Unchecked
+CallTypeName	nvarchar(50)	Unchecked
+Committee:
+CommitteeID	int	Unchecked
+CommitteeName	nvarchar(100)	Unchecked
+ProvinceID	int	Unchecked
+Customer:
+CustomerID	int	Unchecked
+CustomerLastName	nvarchar(50)	Unchecked
+CustomerFirstName	nvarchar(50)	Unchecked
+CustomerRegisterNumber	nvarchar(20)	Unchecked
+CustomerPhoneNumber1	nvarchar(20)	Checked
+CustomerPhoneNumber2	nvarchar(20)	Checked
+CommitteeID	int	Unchecked
+CustomerAddress	nvarchar(200)	Checked
+Documents:
+DocumentsID	int	Unchecked
+DocumentsName	nvarchar(100)	Unchecked
+Employee:
+EmployeeID	int	Unchecked
+EmployeeLastName	nvarchar(50)	Unchecked
+EmployeeFirstName	nvarchar(50)	Unchecked
+EmployeePhoneNumber	nvarchar(20)	Checked
+EmployeeAddress	nvarchar(200)	Checked
+CommitteID	int	Unchecked
+EmployeeUsername	nvarchar(50)	Checked
+EmployeePassword	nvarchar(255)	Checked
+InvestigationOrganization:
+InvestigationOrganizationID	int	Unchecked
+InvestigationOrganizationName	nvarchar(100)	Unchecked
+LoginDetails:
+LoginID	int	Unchecked
+LoginDate	datetime	Checked
+EmployeeID	int	Checked
+PropertyType:
+PropertyTypeID	int	Unchecked
+PropertyTypeName	nvarchar(50)	Unchecked
+Province:
+ProvinceID	int	Unchecked
+ProvinceName	nvarchar(100)	Unchecked
