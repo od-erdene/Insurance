@@ -26,7 +26,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(22, 290);
+            this.btnAdd.Location = new System.Drawing.Point(3, 317);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 30);
             this.btnAdd.TabIndex = 0;
@@ -35,7 +35,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(112, 290);
+            this.btnEdit.Location = new System.Drawing.Point(84, 317);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 30);
             this.btnEdit.TabIndex = 1;
@@ -44,7 +44,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(202, 290);
+            this.btnDelete.Location = new System.Drawing.Point(165, 317);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 30);
             this.btnDelete.TabIndex = 2;
@@ -55,12 +55,13 @@
             // 
             this.grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid.ColumnHeadersHeight = 29;
-            this.grid.Location = new System.Drawing.Point(22, 17);
+            this.grid.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grid.Location = new System.Drawing.Point(0, 0);
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
             this.grid.RowHeadersWidth = 51;
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(400, 250);
+            this.grid.Size = new System.Drawing.Size(450, 311);
             this.grid.TabIndex = 3;
             // 
             // UserControlProvince

@@ -1,4 +1,4 @@
-﻿// UserControlCallTimeType.cs
+﻿// UserControlInvestigationOrganization.cs
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -6,39 +6,39 @@ using System.Data.SqlClient; // Required for SqlException
 
 namespace Insurance
 {
-    public partial class UserControlCallTimeType : UserControl
+    public partial class UserControlInvestigationOrganization : UserControl
     {
-        public UserControlCallTimeType()
+        public UserControlInvestigationOrganization()
         {
             InitializeComponent();
-            Load += UserControlCallTimeType_Load;
+            Load += UserControlInvestigationOrganization_Load;
         }
 
-        private void UserControlCallTimeType_Load(object sender, EventArgs e)
+        private void UserControlInvestigationOrganization_Load(object sender, EventArgs e)
         {
-            LoadCallTimeTypes();
+            LoadInvestigationOrganizations();
         }
 
-        private void LoadCallTimeTypes()
+        private void LoadInvestigationOrganizations()
         {
             DB db = null; // Initialize to null
             try
             {
                 db = new DB();
-                db.cmd.CommandText = "SELECT CallTimeTypeID, CallTimeTypeName FROM CallTimeType ORDER BY CallTimeTypeName";
+                db.cmd.CommandText = "SELECT InvestigationOrganizationID, InvestigationOrganizationName FROM InvestigationOrganization ORDER BY InvestigationOrganizationName";
                 DataTable dt = new DataTable();
                 dt.Load(db.cmd.ExecuteReader());
                 grid.DataSource = dt;
 
                 // Optionally, rename column headers for better display
-                if (grid.Columns.Contains("CallTimeTypeName"))
-                    grid.Columns["CallTimeTypeName"].HeaderText = "Дуудлагын цагийн төрөл";
-                if (grid.Columns.Contains("CallTimeTypeID"))
-                    grid.Columns["CallTimeTypeID"].Visible = false; // Hide ID column
+                if (grid.Columns.Contains("InvestigationOrganizationName"))
+                    grid.Columns["InvestigationOrganizationName"].HeaderText = "Мөрдөн байцаах байгууллага";
+                if (grid.Columns.Contains("InvestigationOrganizationID"))
+                    grid.Columns["InvestigationOrganizationID"].Visible = false; // Hide ID column
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Дуудлагын цагийн төрөл ачаалахад алдаа гарлаа: " + ex.Message);
+                MessageBox.Show("Мөрдөн байцаах байгууллагыг ачаалахад алдаа гарлаа: " + ex.Message);
             }
             finally
             {
@@ -51,10 +51,10 @@ namespace Insurance
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var form = new AddCallTimeTypeForm();
+            var form = new AddInvestigationOrganizationForm();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                LoadCallTimeTypes();
+                LoadInvestigationOrganizations();
             }
         }
 
@@ -62,18 +62,18 @@ namespace Insurance
         {
             if (grid.CurrentRow != null)
             {
-                int id = Convert.ToInt32(grid.CurrentRow.Cells["CallTimeTypeID"].Value);
-                string name = grid.CurrentRow.Cells["CallTimeTypeName"].Value.ToString();
+                int id = Convert.ToInt32(grid.CurrentRow.Cells["InvestigationOrganizationID"].Value);
+                string name = grid.CurrentRow.Cells["InvestigationOrganizationName"].Value.ToString();
 
-                var form = new UpdateCallTimeTypeForm(id, name);
+                var form = new UpdateInvestigationOrganizationForm(id, name);
                 if (form.ShowDialog() == DialogResult.OK)
                 {
-                    LoadCallTimeTypes();
+                    LoadInvestigationOrganizations();
                 }
             }
             else
             {
-                MessageBox.Show("Засах дуудлагын цагийн төрлийг сонгоно уу.");
+                MessageBox.Show("Засах мөрдөн байцаах байгууллагыг сонгоно уу.");
             }
         }
 
@@ -81,25 +81,25 @@ namespace Insurance
         {
             if (grid.CurrentRow != null)
             {
-                int id = Convert.ToInt32(grid.CurrentRow.Cells["CallTimeTypeID"].Value);
-                DialogResult result = MessageBox.Show("Та энэ дуудлагын цагийн төрлийг устгахдаа итгэлтэй байна уу?", "Баталгаажуулалт", MessageBoxButtons.YesNo);
+                int id = Convert.ToInt32(grid.CurrentRow.Cells["InvestigationOrganizationID"].Value);
+                DialogResult result = MessageBox.Show("Та энэ мөрдөн байцаах байгууллагыг устгахдаа итгэлтэй байна уу?", "Баталгаажуулалт", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     DB db = null; // Initialize to null
                     try
                     {
                         db = new DB();
-                        db.cmd.CommandText = "DELETE FROM CallTimeType WHERE CallTimeTypeID = @id";
+                        db.cmd.CommandText = "DELETE FROM InvestigationOrganization WHERE InvestigationOrganizationID = @id";
                         db.cmd.Parameters.AddWithValue("@id", id);
                         db.cmd.ExecuteNonQuery();
                         MessageBox.Show("Амжилттай устгагдлаа!");
-                        LoadCallTimeTypes();
+                        LoadInvestigationOrganizations();
                     }
                     catch (SqlException ex)
                     {
                         if (ex.Number == 547) // Foreign Key Violation
                         {
-                            MessageBox.Show("Энэ дуудлагын цагийн төрөлтэй холбоотой өгөгдөл байгаа тул устгах боломжгүй.");
+                            MessageBox.Show("Энэ мөрдөн байцаах байгууллагатай холбоотой өгөгдөл байгаа тул устгах боломжгүй.");
                         }
                         else
                         {
@@ -121,7 +121,7 @@ namespace Insurance
             }
             else
             {
-                MessageBox.Show("Устгах дуудлагын цагийн төрлийг сонгоно уу.");
+                MessageBox.Show("Устгах мөрдөн байцаах байгууллагыг сонгоно уу.");
             }
         }
     }

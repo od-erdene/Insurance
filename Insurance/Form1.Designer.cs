@@ -35,7 +35,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(120, 86);
-            this.button1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button1.Margin = new System.Windows.Forms.Padding(1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 41);
             this.button1.TabIndex = 0;
@@ -46,7 +46,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(303, 86);
-            this.button2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.button2.Margin = new System.Windows.Forms.Padding(1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 41);
             this.button2.TabIndex = 1;
@@ -58,12 +58,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 384);
+            this.ClientSize = new System.Drawing.Size(557, 254);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Main Menu";
             this.ResumeLayout(false);
 
         }

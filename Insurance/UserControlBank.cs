@@ -25,7 +25,7 @@ namespace Insurance
                 db = new DB();
                 string query = @"
                     SELECT
-                        BankID, BankName AS [Банкны нэр]  -- Aliasing column header to Mongolian
+                        BankID, BankName AS [Банкны нэр]  
                     FROM Bank
                     ORDER BY BankName;"; 
 

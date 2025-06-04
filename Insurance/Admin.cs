@@ -46,7 +46,7 @@ namespace Insurance
             }
             if (e.Node.Name == "Node3")
             {
-                controlTypeToInstantiate = typeof(UserControlDocuments);
+                controlTypeToInstantiate = typeof(UserControlDocumentsType);
             }
             if (e.Node.Name == "Node5")
             {
@@ -82,7 +82,7 @@ namespace Insurance
             }
             if (e.Node.Name == "Node15")
             {
-                controlTypeToInstantiate = typeof(UserControlInvestigatorOrganization);
+                controlTypeToInstantiate = typeof(UserControlInvestigationOrganization);
             }
             if (controlTypeToInstantiate != null)
             {

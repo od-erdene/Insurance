@@ -70,11 +70,53 @@
     <Compile Include="AddBankForm.Designer.cs">
       <DependentUpon>AddBankForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddCallTimeTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCallTimeTypeForm.Designer.cs">
+      <DependentUpon>AddCallTimeTypeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddCallTypeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddCallTypeForm.Designer.cs">
       <DependentUpon>AddCallTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCommitteeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCommitteeForm.Designer.cs">
+      <DependentUpon>AddCommitteeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomerForm.Designer.cs">
+      <DependentUpon>AddCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDocumentsTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDocumentsTypeForm.Designer.cs">
+      <DependentUpon>AddDocumentsTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployeeForm.Designer.cs">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddInvestigationOrganizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddInvestigationOrganizationForm.Designer.cs">
+      <DependentUpon>AddInvestigationOrganizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPropertyTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPropertyTypeForm.Designer.cs">
+      <DependentUpon>AddPropertyTypeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AddProvinceFrom.cs">
       <SubType>Form</SubType>
@@ -163,11 +205,53 @@
     <Compile Include="UpdateBankForm.Designer.cs">
       <DependentUpon>UpdateBankForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateCallTimeTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCallTimeTypeForm.Designer.cs">
+      <DependentUpon>UpdateCallTimeTypeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateCallTypeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UpdateCallTypeForm.Designer.cs">
       <DependentUpon>UpdateCallTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCommitteeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCommitteeForm.Designer.cs">
+      <DependentUpon>UpdateCommitteeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomerForm.Designer.cs">
+      <DependentUpon>UpdateCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDocumentsTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDocumentsTypeForm.Designer.cs">
+      <DependentUpon>UpdateDocumentsTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateEmployeeForm.Designer.cs">
+      <DependentUpon>UpdateEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInvestigationOrganizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInvestigationOrganizationForm.Designer.cs">
+      <DependentUpon>UpdateInvestigationOrganizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePropertyTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePropertyTypeForm.Designer.cs">
+      <DependentUpon>UpdatePropertyTypeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateProvinceForm.cs">
       <SubType>Form</SubType>
@@ -217,12 +301,6 @@
     <Compile Include="UserControlCustomer.Designer.cs">
       <DependentUpon>UserControlCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlDocuments.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlDocuments.Designer.cs">
-      <DependentUpon>UserControlDocuments.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControlDocumentsType.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -235,11 +313,11 @@
     <Compile Include="UserControlEmployee.Designer.cs">
       <DependentUpon>UserControlEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlInvestigatorOrganization.cs">
+    <Compile Include="UserControlInvestigationOrganization.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlInvestigatorOrganization.Designer.cs">
-      <DependentUpon>UserControlInvestigatorOrganization.cs</DependentUpon>
+    <Compile Include="UserControlInvestigationOrganization.Designer.cs">
+      <DependentUpon>UserControlInvestigationOrganization.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlPropertyType.cs">
       <SubType>UserControl</SubType>
@@ -271,8 +349,29 @@
     <EmbeddedResource Include="AddBankForm.resx">
       <DependentUpon>AddBankForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddCallTimeTypeForm.resx">
+      <DependentUpon>AddCallTimeTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddCallTypeForm.resx">
       <DependentUpon>AddCallTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCommitteeForm.resx">
+      <DependentUpon>AddCommitteeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCustomerForm.resx">
+      <DependentUpon>AddCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDocumentsTypeForm.resx">
+      <DependentUpon>AddDocumentsTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEmployeeForm.resx">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddInvestigationOrganizationForm.resx">
+      <DependentUpon>AddInvestigationOrganizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPropertyTypeForm.resx">
+      <DependentUpon>AddPropertyTypeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddProvinceFrom.resx">
       <DependentUpon>AddProvinceFrom.cs</DependentUpon>
@@ -325,8 +424,29 @@
     <EmbeddedResource Include="UpdateBankForm.resx">
       <DependentUpon>UpdateBankForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCallTimeTypeForm.resx">
+      <DependentUpon>UpdateCallTimeTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateCallTypeForm.resx">
       <DependentUpon>UpdateCallTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCommitteeForm.resx">
+      <DependentUpon>UpdateCommitteeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCustomerForm.resx">
+      <DependentUpon>UpdateCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateDocumentsTypeForm.resx">
+      <DependentUpon>UpdateDocumentsTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateEmployeeForm.resx">
+      <DependentUpon>UpdateEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInvestigationOrganizationForm.resx">
+      <DependentUpon>UpdateInvestigationOrganizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePropertyTypeForm.resx">
+      <DependentUpon>UpdatePropertyTypeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateProvinceForm.resx">
       <DependentUpon>UpdateProvinceForm.cs</DependentUpon>
@@ -352,17 +472,14 @@
     <EmbeddedResource Include="UserControlCustomer.resx">
       <DependentUpon>UserControlCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlDocuments.resx">
-      <DependentUpon>UserControlDocuments.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControlDocumentsType.resx">
       <DependentUpon>UserControlDocumentsType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlEmployee.resx">
       <DependentUpon>UserControlEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlInvestigatorOrganization.resx">
-      <DependentUpon>UserControlInvestigatorOrganization.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlInvestigationOrganization.resx">
+      <DependentUpon>UserControlInvestigationOrganization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlPropertyType.resx">
       <DependentUpon>UserControlPropertyType.cs</DependentUpon>
