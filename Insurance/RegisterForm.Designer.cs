@@ -169,7 +169,7 @@
             this.gbNotification.Controls.Add(this.lblNotificationText);
             this.gbNotification.Location = new System.Drawing.Point(15, 1436);
             this.gbNotification.Name = "gbNotification";
-            this.gbNotification.Size = new System.Drawing.Size(787, 100);
+            this.gbNotification.Size = new System.Drawing.Size(787, 84);
             this.gbNotification.TabIndex = 8;
             this.gbNotification.TabStop = false;
             this.gbNotification.Text = "МЭДЭГДЭЛ";
@@ -194,9 +194,9 @@
             this.gbCompanyUse.Controls.Add(this.lblCallTimeCompany);
             this.gbCompanyUse.Controls.Add(this.dtpCallDateCompany);
             this.gbCompanyUse.Controls.Add(this.lblCallDateCompany);
-            this.gbCompanyUse.Location = new System.Drawing.Point(15, 1558);
+            this.gbCompanyUse.Location = new System.Drawing.Point(15, 1526);
             this.gbCompanyUse.Name = "gbCompanyUse";
-            this.gbCompanyUse.Size = new System.Drawing.Size(787, 110);
+            this.gbCompanyUse.Size = new System.Drawing.Size(787, 118);
             this.gbCompanyUse.TabIndex = 9;
             this.gbCompanyUse.TabStop = false;
             this.gbCompanyUse.Text = "Компанийн хэрэгцээнд";
@@ -374,9 +374,9 @@
             // 
             this.cmbBank.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBank.FormattingEnabled = true;
-            this.cmbBank.Location = new System.Drawing.Point(150, 127);
+            this.cmbBank.Location = new System.Drawing.Point(168, 127);
             this.cmbBank.Name = "cmbBank";
-            this.cmbBank.Size = new System.Drawing.Size(250, 21);
+            this.cmbBank.Size = new System.Drawing.Size(232, 21);
             this.cmbBank.TabIndex = 7;
             // 
             // lblBankName
@@ -390,25 +390,24 @@
             // 
             // txtBankAccountDetails
             // 
-            this.txtBankAccountDetails.Location = new System.Drawing.Point(150, 80);
+            this.txtBankAccountDetails.Location = new System.Drawing.Point(168, 80);
             this.txtBankAccountDetails.Multiline = true;
             this.txtBankAccountDetails.Name = "txtBankAccountDetails";
             this.txtBankAccountDetails.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtBankAccountDetails.Size = new System.Drawing.Size(517, 40);
+            this.txtBankAccountDetails.Size = new System.Drawing.Size(499, 40);
             this.txtBankAccountDetails.TabIndex = 5;
             // 
             // lblBankAccountDetails
             // 
-            this.lblBankAccountDetails.AutoSize = true;
             this.lblBankAccountDetails.Location = new System.Drawing.Point(15, 83);
             this.lblBankAccountDetails.Name = "lblBankAccountDetails";
-            this.lblBankAccountDetails.Size = new System.Drawing.Size(147, 13);
+            this.lblBankAccountDetails.Size = new System.Drawing.Size(147, 37);
             this.lblBankAccountDetails.TabIndex = 4;
-            this.lblBankAccountDetails.Text = "Бусад дансны дэлгэрэнгүй:";
+            this.lblBankAccountDetails.Text = "Бусад дансны тухай дэлгэрэнгүй мэдээлэл:";
             // 
             // txtBankAccountOwnerName
             // 
-            this.txtBankAccountOwnerName.Location = new System.Drawing.Point(150, 54);
+            this.txtBankAccountOwnerName.Location = new System.Drawing.Point(168, 54);
             this.txtBankAccountOwnerName.Name = "txtBankAccountOwnerName";
             this.txtBankAccountOwnerName.Size = new System.Drawing.Size(250, 20);
             this.txtBankAccountOwnerName.TabIndex = 3;
@@ -426,7 +425,7 @@
             // 
             this.cmbBankAccountType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBankAccountType.FormattingEnabled = true;
-            this.cmbBankAccountType.Location = new System.Drawing.Point(150, 27);
+            this.cmbBankAccountType.Location = new System.Drawing.Point(168, 27);
             this.cmbBankAccountType.Name = "cmbBankAccountType";
             this.cmbBankAccountType.Size = new System.Drawing.Size(250, 21);
             this.cmbBankAccountType.TabIndex = 1;
@@ -1104,7 +1103,7 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(686, 79);
+            this.btnCancel.Location = new System.Drawing.Point(686, 87);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(83, 23);
             this.btnCancel.TabIndex = 11;
@@ -1115,7 +1114,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(597, 79);
+            this.btnSave.Location = new System.Drawing.Point(597, 87);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(83, 23);
             this.btnSave.TabIndex = 10;
