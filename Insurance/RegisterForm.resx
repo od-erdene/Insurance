@@ -117,19 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label33.Text" xml:space="preserve">
-    <value>Таны нөхөн төлбөрийн хүсэлтийг Даатгалын гэрээний дагуу ажлын 14 хоног хүртэлх хугацаанд шийдвэрлэнэ. Энэ хугацаанд эд хөрөнгөд засвар үйлчилгээ хийх тохиолдолд Даатгагчид заавал мэдэгдэж зөвшөөрөл авна. Та өөрт хадгалагдах гэрээний  нөхцөлийг сайтар уншиж судлана уу. Лавлах утас: 11-313111, 99091620</value>
+  <data name="lblNotificationText.Text" xml:space="preserve">
+    <value>Таны нөхөн төлбөрийн хүсэлтийг Даатгалын гэрээний дагуу ажлын 14 хоног хүртэлх хугацаанд шийдвэрлэнэ. Энэ хугацаанд эд хөрөнгөд засвар үйлчилгээ хийх тохиолдолд Даатгагчид заавал мэдэгдэж зөвшөөрөл авна. Та өөрт хадгалагдах гэрээний нөхцөлийг сайтар уншиж судлана уу. Лавлах утас: 11-313111, 99091620</value>
   </data>
-  <data name="label32.Text" xml:space="preserve">
-    <value>Би үнэн зөв, бүрэн гүйцэд мэдүүлснээ баталж байна. Би өөрийн нөхөн төлбөрийн хүсэлтийг шийдвэрлүүлэх зорилгоор миний хохиролтой холбоотой бүхий л мэдээллээр “ТЭНГЭР ДААТГАЛ” ХХК-ийг хангаж байх эрхийг холбогдох байгууллагын удирдлага, ажилтнууд болон гэрчид олгож байна</value>
+  <data name="lblDeclarationText.Text" xml:space="preserve">
+    <value>Би үнэн зөв, бүрэн гүйцэд мэдүүлснээ баталж байна. Би өөрийн нөхөн төлбөрийн хүсэлтийг шийдвэрлүүлэх зорилгоор миний хохиролтой холбоотой бүхий л мэдээллээр “ТЭНГЭР ДААТГАЛ” ХХК-ийг хангаж байх эрхийг холбогдох байгууллагын удирдлага, ажилтнууд болон гэрчид олгож байна.</value>
   </data>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>982, 17</value>
-  </metadata>
-  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1198, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
 </root>

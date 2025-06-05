@@ -19,7 +19,7 @@ namespace Insurance
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Register register = new Register();
+            RegisterForm register = new RegisterForm();
             register.ShowDialog();
             this.Hide();
 
