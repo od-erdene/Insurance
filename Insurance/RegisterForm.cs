@@ -8,16 +8,11 @@ namespace Insurance
 {
     public partial class RegisterForm : Form
     {
-        // Store original document names and their IDs fetched from DB
         private Dictionary<int, string> documentIdToNameMap = new Dictionary<int, string>();
 
         public RegisterForm()
         {
             InitializeComponent();
-            // Set the initial size of the form (Width, Height)
-            // The mainPanel has AutoScroll = true, so if content overflows, scrollbars will appear.
-            // The Height of mainPanel is increased in Designer to accommodate all group boxes.
-            // Buttons are anchored to the bottom right of the Form, not the Panel.
         }
 
         private void RegisterForm_Load(object sender, EventArgs e)
@@ -33,58 +28,55 @@ namespace Insurance
             LoadBankAccountTypes();
             LoadCallTypesCompany();
             LoadEmployees();
-            LoadDocuments(); // Load documents for the checklist
+            LoadDocuments(); 
 
-            // Set default states or values if necessary
             dtpAccidentDate.Value = DateTime.Today;
             dtpAccidentTime.Value = DateTime.Now;
             dtpAppliedDate.Value = DateTime.Today;
             dtpCallDateCompany.Value = DateTime.Today;
             dtpCallTimeCompany.Value = DateTime.Now;
 
-            chkContactedInvestigator_CheckedChanged(null, null); // Initialize investigator fields state
+            chkContactedInvestigator_CheckedChanged(null, null); 
         }
+
+        // In RegisterForm.cs
 
         private void LoadDocuments()
         {
-            documentIdToNameMap.Clear();
-            List<KeyValuePair<int, string>> documents = new List<KeyValuePair<int, string>>();
-            using (DB db = new DB())
+            // Clear any controls that might exist from a previous load
+            flowLayoutPanelDocuments.Controls.Clear();
+
+            using (var db = new DB()) // Using your actual DB class
             {
                 try
                 {
-                    db.cmd.CommandText = "SELECT DocumentsID, DocumentsName FROM Documents ORDER BY DocumentsID";
-                    db.dr = db.cmd.ExecuteReader();
-                    while (db.dr.Read())
+                    // Select all documents you want to display
+                    string query = "SELECT DocumentsID, DocumentsName FROM Documents ORDER BY DocumentsID";
+                    db.cmd.CommandText = query; // Set the command text on the existing command object
+
+                    // The connection is already open from the DB() constructor
+                    using (var reader = db.cmd.ExecuteReader())
                     {
-                        int docId = Convert.ToInt32(db.dr["DocumentsID"]);
-                        string docName = db.dr["DocumentsName"].ToString();
-                        documents.Add(new KeyValuePair<int, string>(docId, docName));
-                        documentIdToNameMap[docId] = docName; // Store for later reference
+                        while (reader.Read())
+                        {
+                            int docId = Convert.ToInt32(reader["DocumentsID"]);
+                            string docName = reader["DocumentsName"].ToString();
+
+                            // Create a new CheckBox for each document
+                            CheckBox chk = new CheckBox();
+                            chk.Text = docName;
+                            chk.Tag = docId; // Store the DocumentID in the Tag property
+                            chk.AutoSize = true;
+                            chk.Margin = new Padding(5);
+
+                            // Add the new checkbox to the panel
+                            flowLayoutPanelDocuments.Controls.Add(chk);
+                        }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Баримт бичгийн жагсаалтыг ачаалахад алдаа гарлаа: " + ex.Message, "Алдаа", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    if (db.dr != null && !db.dr.IsClosed) db.dr.Close();
-                }
-            }
-
-            // Assuming chkDoc1 to chkDoc9 correspond to the first 9 documents in order
-            CheckBox[] chkDocs = { chkDoc1, chkDoc2, chkDoc3, chkDoc4, chkDoc5, chkDoc6, chkDoc7, chkDoc8, chkDoc9 };
-            for (int i = 0; i < chkDocs.Length; i++)
-            {
-                if (i < documents.Count)
-                {
-                    chkDocs[i].Text = $"{i + 1}. {documents[i].Value}";
-                    chkDocs[i].Tag = documents[i].Key; // Store DocumentID in Tag
-                }
-                else
-                {
-                    chkDocs[i].Visible = false; // Hide checkboxes if not enough documents in DB
+                    MessageBox.Show("Failed to load documents: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -391,12 +383,6 @@ namespace Insurance
 
             using (DB db = new DB())
             {
-                // For operations spanning multiple tables, transactions are good.
-                // However, SqlCommand by default doesn't enlist in a transaction unless one is explicitly started on the connection.
-                // For simplicity here, we'll execute commands sequentially. If any fails, prior ones are not auto-rolled back without a transaction.
-                // Consider adding transaction handling if atomicity is critical.
-                // SqlTransaction transaction = db.con.BeginTransaction();
-                // db.cmd.Transaction = transaction;
 
                 try
                 {
@@ -478,44 +464,50 @@ namespace Insurance
 
                     int accidentId = Convert.ToInt32(db.cmd.ExecuteScalar());
 
-                    // 3. Insert AccidentDocuments
-                    CheckBox[] chkDocs = { chkDoc1, chkDoc2, chkDoc3, chkDoc4, chkDoc5, chkDoc6, chkDoc7, chkDoc8, chkDoc9 };
-                    db.cmd.CommandText = @"INSERT INTO AccidentDocuments (DocumentID, IsSubmitted, IsVerified, SubmittedAt, EmployeeID, AccidentID)
-                                           VALUES (@DocumentID, @IsSubmitted, @IsVerified, @SubmittedAt, @EmployeeID, @AccidentID)";
 
-                    // For EmployeeID in AccidentDocuments, if it's the same as CallEmployeeID or another specific employee
-                    int? docEmployeeId = (cmbCallEmployee.SelectedValue == null || cmbCallEmployee.SelectedValue == DBNull.Value) ? (int?)null : Convert.ToInt32(cmbCallEmployee.SelectedValue);
+                    string docInsertQuery = @"
+            INSERT INTO AccidentDocuments 
+            (DocumentID, IsSubmitted, IsVerified, SubmittedAt, EmployeeID, AccidentID) 
+            VALUES 
+            (@DocumentID, @IsSubmitted, @IsVerified, @SubmittedAt, @EmployeeID, @AccidentID)";
 
+                    int? docEmployeeId = 1; 
 
-                    foreach (var chk in chkDocs)
+                    foreach (CheckBox docCheckbox in this.flowLayoutPanelDocuments.Controls.OfType<CheckBox>())
                     {
-                        if (chk.Checked && chk.Tag != null) // chk.Tag stores DocumentID
+                        using (db) 
                         {
-                            db.cmd.Parameters.Clear();
-                            db.cmd.Parameters.AddWithValue("@DocumentID", Convert.ToInt32(chk.Tag));
-                            db.cmd.Parameters.AddWithValue("@IsSubmitted", true);
-                            db.cmd.Parameters.AddWithValue("@IsVerified", false); // Default to not verified
+                            db.cmd.CommandText = docInsertQuery;
+                            db.cmd.Parameters.Clear(); 
+
+                            int documentId = (int)docCheckbox.Tag;
+                            bool isSubmitted = docCheckbox.Checked;
+
+                            db.cmd.Parameters.AddWithValue("@DocumentID", documentId);
+                            db.cmd.Parameters.AddWithValue("@IsSubmitted", isSubmitted);
+                            db.cmd.Parameters.AddWithValue("@IsVerified", false); 
                             db.cmd.Parameters.AddWithValue("@SubmittedAt", DateTime.Now);
+
                             if (docEmployeeId.HasValue)
                                 db.cmd.Parameters.AddWithValue("@EmployeeID", docEmployeeId.Value);
                             else
-                                db.cmd.Parameters.AddWithValue("@EmployeeID", DBNull.Value); // Or handle as required
+                                db.cmd.Parameters.AddWithValue("@EmployeeID", DBNull.Value);
 
                             db.cmd.Parameters.AddWithValue("@AccidentID", accidentId);
+
                             db.cmd.ExecuteNonQuery();
                         }
                     }
 
-                    // transaction.Commit(); // If transaction was used
                     MessageBox.Show("Мэдээлэл амжилттай хадгалагдлаа!", "Амжилттай", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
                 catch (Exception ex)
                 {
-                    // if (transaction != null) transaction.Rollback(); // If transaction was used
-                    MessageBox.Show("Мэдээлэл хадгалахад алдаа гарлаа: " + ex.Message + "\nStack Trace: " + ex.StackTrace, "Алдаа", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Мэдээлэл хадгалахад алдаа гарлаа: " + ex.Message, "Алдаа", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                // --- End of the updated section ---
             }
         }
 

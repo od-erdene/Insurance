@@ -30,7 +30,7 @@ namespace Insurance
 
         private void backBTN_Click(object sender, EventArgs e)
         {
-            Register register = new Register();
+            RegisterForm register = new RegisterForm();
             register.ShowDialog();
         }
     }

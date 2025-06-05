@@ -48,15 +48,6 @@
             this.lblApplicationSignature = new System.Windows.Forms.Label();
             this.lblDeclarationText = new System.Windows.Forms.Label();
             this.gbSubmittedDocuments = new System.Windows.Forms.GroupBox();
-            this.chkDoc9 = new System.Windows.Forms.CheckBox();
-            this.chkDoc8 = new System.Windows.Forms.CheckBox();
-            this.chkDoc7 = new System.Windows.Forms.CheckBox();
-            this.chkDoc6 = new System.Windows.Forms.CheckBox();
-            this.chkDoc5 = new System.Windows.Forms.CheckBox();
-            this.chkDoc4 = new System.Windows.Forms.CheckBox();
-            this.chkDoc3 = new System.Windows.Forms.CheckBox();
-            this.chkDoc2 = new System.Windows.Forms.CheckBox();
-            this.chkDoc1 = new System.Windows.Forms.CheckBox();
             this.gbBankInfo = new System.Windows.Forms.GroupBox();
             this.txtBankAccountNumber = new System.Windows.Forms.TextBox();
             this.lblBankAccountNumber = new System.Windows.Forms.Label();
@@ -140,6 +131,7 @@
             this.lblCustomerLastName = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.flowLayoutPanelDocuments = new System.Windows.Forms.FlowLayoutPanel();
             this.mainPanel.SuspendLayout();
             this.gbNotification.SuspendLayout();
             this.gbCompanyUse.SuspendLayout();
@@ -175,7 +167,7 @@
             // gbNotification
             // 
             this.gbNotification.Controls.Add(this.lblNotificationText);
-            this.gbNotification.Location = new System.Drawing.Point(12, 1360);
+            this.gbNotification.Location = new System.Drawing.Point(15, 1436);
             this.gbNotification.Name = "gbNotification";
             this.gbNotification.Size = new System.Drawing.Size(787, 100);
             this.gbNotification.TabIndex = 8;
@@ -202,7 +194,7 @@
             this.gbCompanyUse.Controls.Add(this.lblCallTimeCompany);
             this.gbCompanyUse.Controls.Add(this.dtpCallDateCompany);
             this.gbCompanyUse.Controls.Add(this.lblCallDateCompany);
-            this.gbCompanyUse.Location = new System.Drawing.Point(12, 1466);
+            this.gbCompanyUse.Location = new System.Drawing.Point(15, 1558);
             this.gbCompanyUse.Name = "gbCompanyUse";
             this.gbCompanyUse.Size = new System.Drawing.Size(787, 110);
             this.gbCompanyUse.TabIndex = 9;
@@ -286,7 +278,7 @@
             this.gbDeclaration.Controls.Add(this.txtApplicationSignature);
             this.gbDeclaration.Controls.Add(this.lblApplicationSignature);
             this.gbDeclaration.Controls.Add(this.lblDeclarationText);
-            this.gbDeclaration.Location = new System.Drawing.Point(12, 1224);
+            this.gbDeclaration.Location = new System.Drawing.Point(15, 1288);
             this.gbDeclaration.Name = "gbDeclaration";
             this.gbDeclaration.Size = new System.Drawing.Size(787, 130);
             this.gbDeclaration.TabIndex = 7;
@@ -335,111 +327,13 @@
             // 
             // gbSubmittedDocuments
             // 
-            this.gbSubmittedDocuments.Controls.Add(this.chkDoc9);
-            this.gbSubmittedDocuments.Controls.Add(this.chkDoc8);
-            this.gbSubmittedDocuments.Controls.Add(this.chkDoc7);
-            this.gbSubmittedDocuments.Controls.Add(this.chkDoc6);
-            this.gbSubmittedDocuments.Controls.Add(this.chkDoc5);
-            this.gbSubmittedDocuments.Controls.Add(this.chkDoc4);
-            this.gbSubmittedDocuments.Controls.Add(this.chkDoc3);
-            this.gbSubmittedDocuments.Controls.Add(this.chkDoc2);
-            this.gbSubmittedDocuments.Controls.Add(this.chkDoc1);
+            this.gbSubmittedDocuments.Controls.Add(this.flowLayoutPanelDocuments);
             this.gbSubmittedDocuments.Location = new System.Drawing.Point(12, 1068);
             this.gbSubmittedDocuments.Name = "gbSubmittedDocuments";
-            this.gbSubmittedDocuments.Size = new System.Drawing.Size(787, 150);
+            this.gbSubmittedDocuments.Size = new System.Drawing.Size(787, 214);
             this.gbSubmittedDocuments.TabIndex = 6;
             this.gbSubmittedDocuments.TabStop = false;
             this.gbSubmittedDocuments.Text = "ХҮЛЭЭЛГЭН ӨГСӨН МАТЕРИАЛЫН ЖАГСААЛТ";
-            // 
-            // chkDoc9
-            // 
-            this.chkDoc9.AutoSize = true;
-            this.chkDoc9.Location = new System.Drawing.Point(420, 98);
-            this.chkDoc9.Name = "chkDoc9";
-            this.chkDoc9.Size = new System.Drawing.Size(264, 17);
-            this.chkDoc9.TabIndex = 8;
-            this.chkDoc9.Text = "9. Нэхэмжлэх/зардалын баримт /эх хувиараа/";
-            this.chkDoc9.UseVisualStyleBackColor = true;
-            // 
-            // chkDoc8
-            // 
-            this.chkDoc8.AutoSize = true;
-            this.chkDoc8.Location = new System.Drawing.Point(420, 75);
-            this.chkDoc8.Name = "chkDoc8";
-            this.chkDoc8.Size = new System.Drawing.Size(204, 17);
-            this.chkDoc8.TabIndex = 7;
-            this.chkDoc8.Text = "8. Хохирлын үнэлгээ /эх хувиараа/";
-            this.chkDoc8.UseVisualStyleBackColor = true;
-            // 
-            // chkDoc7
-            // 
-            this.chkDoc7.AutoSize = true;
-            this.chkDoc7.Location = new System.Drawing.Point(420, 52);
-            this.chkDoc7.Name = "chkDoc7";
-            this.chkDoc7.Size = new System.Drawing.Size(333, 17);
-            this.chkDoc7.TabIndex = 6;
-            this.chkDoc7.Text = "7. Буруутай талын иргэний үнэмлэх /баталгаажсан хуулбар/";
-            this.chkDoc7.UseVisualStyleBackColor = true;
-            // 
-            // chkDoc6
-            // 
-            this.chkDoc6.AutoSize = true;
-            this.chkDoc6.Location = new System.Drawing.Point(420, 29);
-            this.chkDoc6.Name = "chkDoc6";
-            this.chkDoc6.Size = new System.Drawing.Size(260, 17);
-            this.chkDoc6.TabIndex = 5;
-            this.chkDoc6.Text = "6. Гэмтэж, эвдэрсэн эд хөрөнгийн фото зураг";
-            this.chkDoc6.UseVisualStyleBackColor = true;
-            // 
-            // chkDoc5
-            // 
-            this.chkDoc5.AutoSize = true;
-            this.chkDoc5.Location = new System.Drawing.Point(18, 121);
-            this.chkDoc5.Name = "chkDoc5";
-            this.chkDoc5.Size = new System.Drawing.Size(369, 17);
-            this.chkDoc5.TabIndex = 4;
-            this.chkDoc5.Text = "5. Орон сууцны контор, СӨХ бусад байгууллагын акт, тодорхойлолт";
-            this.chkDoc5.UseVisualStyleBackColor = true;
-            // 
-            // chkDoc4
-            // 
-            this.chkDoc4.AutoSize = true;
-            this.chkDoc4.Location = new System.Drawing.Point(18, 98);
-            this.chkDoc4.Name = "chkDoc4";
-            this.chkDoc4.Size = new System.Drawing.Size(328, 17);
-            this.chkDoc4.TabIndex = 3;
-            this.chkDoc4.Text = "4. Эрх бүхий байгууллагын акт, тодорхойлолт /эх хувиараа/";
-            this.chkDoc4.UseVisualStyleBackColor = true;
-            // 
-            // chkDoc3
-            // 
-            this.chkDoc3.AutoSize = true;
-            this.chkDoc3.Location = new System.Drawing.Point(18, 75);
-            this.chkDoc3.Name = "chkDoc3";
-            this.chkDoc3.Size = new System.Drawing.Size(186, 17);
-            this.chkDoc3.TabIndex = 2;
-            this.chkDoc3.Text = "3. Иргэний үнэмлэхний хуулбар";
-            this.chkDoc3.UseVisualStyleBackColor = true;
-            // 
-            // chkDoc2
-            // 
-            this.chkDoc2.AutoSize = true;
-            this.chkDoc2.Location = new System.Drawing.Point(18, 52);
-            this.chkDoc2.Name = "chkDoc2";
-            this.chkDoc2.Size = new System.Drawing.Size(230, 17);
-            this.chkDoc2.TabIndex = 1;
-            this.chkDoc2.Text = "2. Даатгалын гэрээт баталгаа /эх хувь/";
-            this.chkDoc2.UseVisualStyleBackColor = true;
-            // 
-            // chkDoc1
-            // 
-            this.chkDoc1.AutoSize = true;
-            this.chkDoc1.Location = new System.Drawing.Point(18, 29);
-            this.chkDoc1.Name = "chkDoc1";
-            this.chkDoc1.Size = new System.Drawing.Size(329, 17);
-            this.chkDoc1.TabIndex = 0;
-            this.chkDoc1.Text = "1. Компанийн албан бичиг /гэрээ компанийн нэр дээр бол/";
-            this.chkDoc1.UseVisualStyleBackColor = true;
             // 
             // gbBankInfo
             // 
@@ -1229,6 +1123,17 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // flowLayoutPanelDocuments
+            // 
+            this.flowLayoutPanelDocuments.AutoScroll = true;
+            this.flowLayoutPanelDocuments.AutoScrollMargin = new System.Drawing.Size(0, 100);
+            this.flowLayoutPanelDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelDocuments.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelDocuments.Location = new System.Drawing.Point(3, 16);
+            this.flowLayoutPanelDocuments.Name = "flowLayoutPanelDocuments";
+            this.flowLayoutPanelDocuments.Size = new System.Drawing.Size(781, 195);
+            this.flowLayoutPanelDocuments.TabIndex = 0;
+            // 
             // RegisterForm
             // 
             this.AcceptButton = this.btnSave;
@@ -1251,7 +1156,6 @@
             this.gbDeclaration.ResumeLayout(false);
             this.gbDeclaration.PerformLayout();
             this.gbSubmittedDocuments.ResumeLayout(false);
-            this.gbSubmittedDocuments.PerformLayout();
             this.gbBankInfo.ResumeLayout(false);
             this.gbBankInfo.PerformLayout();
             this.gbOffenderInfo.ResumeLayout(false);
@@ -1353,15 +1257,6 @@
         private System.Windows.Forms.ComboBox cmbBankAccountType;
         private System.Windows.Forms.Label lblBankAccountType;
         private System.Windows.Forms.GroupBox gbSubmittedDocuments;
-        private System.Windows.Forms.CheckBox chkDoc9;
-        private System.Windows.Forms.CheckBox chkDoc8;
-        private System.Windows.Forms.CheckBox chkDoc7;
-        private System.Windows.Forms.CheckBox chkDoc6;
-        private System.Windows.Forms.CheckBox chkDoc5;
-        private System.Windows.Forms.CheckBox chkDoc4;
-        private System.Windows.Forms.CheckBox chkDoc3;
-        private System.Windows.Forms.CheckBox chkDoc2;
-        private System.Windows.Forms.CheckBox chkDoc1;
         private System.Windows.Forms.GroupBox gbDeclaration;
         private System.Windows.Forms.DateTimePicker dtpAppliedDate;
         private System.Windows.Forms.Label lblAppliedDate;
@@ -1381,5 +1276,6 @@
         private System.Windows.Forms.Label lblCallDateCompany;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelDocuments;
     }
 }
