@@ -68,9 +68,9 @@ namespace Insurance
             }
         }
 
-        private void button1_Click(object sender, EventArgs e) // Add Button
+        private void button1_Click(object sender, EventArgs e) 
         {
-            using (AddAccidentForm addForm = new AddAccidentForm()) // AddAccidentForm will use its own DB instance
+            using (RegisterForm addForm = new RegisterForm()) 
             {
                 if (addForm.ShowDialog() == DialogResult.OK)
                 {
@@ -79,14 +79,13 @@ namespace Insurance
             }
         }
 
-        private void button2_Click(object sender, EventArgs e) // Update Button
+        private void button2_Click(object sender, EventArgs e) 
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 try
                 {
                     int accidentId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["AccidentID"].Value);
-                    // UpdateAccidentForm will use its own DB instance
                     using (UpdateAccidentForm updateForm = new UpdateAccidentForm(accidentId))
                     {
                         if (updateForm.ShowDialog() == DialogResult.OK)
