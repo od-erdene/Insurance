@@ -24,7 +24,7 @@ namespace Insurance
                 con.Dispose();
 
             }
-            con.ConnectionString = @"Data Source = KHUSLEN\SQLEXPRESS; Initial Catalog = Insurance_New; User ID = sa; Password = 123";
+            con.ConnectionString = @"Data Source = 172.16.32.90; Initial Catalog = Insurance_New; User ID = sa; Password = 123";
             con.Open();
             cmd.Connection = con;
         }

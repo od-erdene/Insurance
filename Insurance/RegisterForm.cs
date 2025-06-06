@@ -475,8 +475,7 @@ namespace Insurance
 
                     foreach (CheckBox docCheckbox in this.flowLayoutPanelDocuments.Controls.OfType<CheckBox>())
                     {
-                        using (db) 
-                        {
+                        
                             db.cmd.CommandText = docInsertQuery;
                             db.cmd.Parameters.Clear(); 
 
@@ -496,7 +495,7 @@ namespace Insurance
                             db.cmd.Parameters.AddWithValue("@AccidentID", accidentId);
 
                             db.cmd.ExecuteNonQuery();
-                        }
+                        
                     }
 
                     MessageBox.Show("Мэдээлэл амжилттай хадгалагдлаа!", "Амжилттай", MessageBoxButtons.OK, MessageBoxIcon.Information);
